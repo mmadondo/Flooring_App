@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="commmadondo.github.flooring_app.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Width"
+        android:id="@+id/textViewWidth"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+    <EditText
+        android:id="@+id/et_Width"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="0.0"
+        android:hint="Enter the width of the room. Decimal numbers only."
+        android:inputType="numberDecimal"
+        android:textSize="14sp">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Length"
+        android:id="@+id/textViewLength"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+    <EditText
+        android:id="@+id/et_Length"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="0.0"
+        android:hint="Enter the length of the room. Decimal numbers only."
+        android:inputType="numberDecimal"
+        android:textSize="14sp">
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Flooring"
+        android:id="@+id/btnResults" />
+</LinearLayout>
