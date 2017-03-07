@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         Area = Length*Width; //calculate flooring area
 
         //display final result
-        tvResult.setText("Flooring Area: \n" + "Width is " + Width + " and Length is " + Length + " and flooring needed is " + Area + " square units.");
+        tvResult.setText("Flooring Area:\nWidth is " + Width + " and Length is " + Length + " and flooring needed is " + Area + " square units.");
     }
 
     }
