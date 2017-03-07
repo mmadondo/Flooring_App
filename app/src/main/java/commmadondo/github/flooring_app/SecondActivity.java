@@ -9,8 +9,8 @@ import android.widget.TextView;
  */
 
 public class SecondActivity extends AppCompatActivity {
-
-    static TextView tvResult;
+ //declare variables
+    TextView tvResult;
     Double Length, Width, Area;
 
     @Override
@@ -21,11 +21,13 @@ public class SecondActivity extends AppCompatActivity {
         tvResult = (TextView) findViewById(R.id.textViewResult);
 
         Bundle extras = getIntent().getExtras();
-        Length = extras.getDouble("rmLength");
-        Width = extras.getDouble("rmWidth");
+        Length = extras.getDouble("rmLength"); //set the length to user input value
+        Width = extras.getDouble("rmWidth");   //set the width to user input value
 
-        Area = Length*Width;
-        tvResult.setText("Width is " + Width + " and Length is " + Length + " and flooring needed is " + Area);
+        Area = Length*Width; //calculate flooring area
+
+        //display final result
+        tvResult.setText("Flooring Area: \n" + "Width is " + Width + " and Length is " + Length + " and flooring needed is " + Area + " square units.");
     }
 
     }

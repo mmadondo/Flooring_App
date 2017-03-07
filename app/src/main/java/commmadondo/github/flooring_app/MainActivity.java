@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    //declare variables
     private EditText etLength, etWidth;
     Button btnCalculate;
 
@@ -17,16 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //initialize widgets
         etLength = (EditText) findViewById(R.id.editTextLength);
         etWidth = (EditText) findViewById(R.id.editTextWidth);
         btnCalculate = (Button) findViewById(R.id.btnResults);
     }
 
     public void onClickResult(View view){
-        Intent calcIntent = new Intent(MainActivity.this, SecondActivity.class);
-        calcIntent.putExtra("rmLength", Double.parseDouble(etLength.getText().toString()));
-        calcIntent.putExtra("rmWidth", Double.parseDouble(etWidth.getText().toString()));
-        startActivity(calcIntent);
+        Intent calcIntent = new Intent(MainActivity.this, SecondActivity.class);    //Call the second activity
+        calcIntent.putExtra("rmLength", Double.parseDouble(etLength.getText().toString())); //get room length as string and convert it to double before sending it to second activity
+        calcIntent.putExtra("rmWidth", Double.parseDouble(etWidth.getText().toString())); //get room width as string and convert it to double before sending it to second activity
+        startActivity(calcIntent); //initiate second activity
     }
 
 }
